@@ -1,0 +1,492 @@
+{
+    "Tipos": [{
+            "descricao": "Administrador",
+            "id": 1
+        }, {
+            "descricao": "Usuário",
+            "id": 2
+        }, {
+            "descricao": "Terrestre",
+            "id": 3
+        }, {
+            "descricao": "Aéreo",
+            "id": 4
+        }, {
+            "descricao": "Naval",
+            "id": 5
+        }, {
+            "descricao": "Ferroviário",
+            "id": 6
+        }, {
+            "descricao": "Objetiva",
+            "id": 7
+        }, {
+            "descricao": "Discursiva",
+            "id": 8
+        }, {
+            "descricao": "Etnia",
+            "id": 9
+        }, {
+            "descricao": "Cabelo",
+            "id": 10
+        }, {
+            "descricao": "Roupa",
+            "id": 11
+        }, {
+            "descricao": "Veículo",
+            "id": 12
+        }, {
+            "descricao": "A pé",
+            "id": 13
+        }],
+    "TiposUsuario": [{
+            "tipo": 1
+        }, {
+            "tipo": 2
+        }],
+    "TiposDeslocamento": [{
+            "tipo": 3
+        }, {
+            "tipo": 4
+        }, {
+            "tipo": 5
+        }, {
+            "tipo": 6
+        }, {
+            "tipo": 13
+        }],
+    "TiposPergunta": [{
+            "tipo": 7
+        }, {
+            "tipo": 8
+        }],
+    "TiposCaracteristica": [{
+            "tipo": 9
+        }, {
+            "tipo": 10
+        }, {
+            "tipo": 11
+        }, {
+            "tipo": 12
+        }],
+    "Locais": [{
+            "id": 1,
+            "nome": "San Diego, EUA",
+            "lat": 32.8626271,
+            "lng": -117.1954135,
+            "localPai": null
+        }, {
+            "id": 2,
+            "nome": "Nova Iorque, EUA",
+            "lat": 40.7056258,
+            "lng": -73.97968,
+            "localPai": null
+        }, {
+            "id": 3,
+            "nome": "Kuala Lumpur, Malásia",
+            "lat": 3.1849382,
+            "lng": 101.7033349,
+            "localPai": null
+        }, {
+            "id": 4,
+            "nome": "Moscou, Rússia",
+            "lat": 55.749792,
+            "lng": 37.632495,
+            "localPai": null
+        }, {
+            "id": 5,
+            "nome": "Mumbai, Índia",
+            "lat": 19.0822507,
+            "lng": 72.8812042,
+            "localPai": null
+        }, {
+            "id": 6,
+            "nome": "Pretoria, África do Sul",
+            "lat": -25.75865,
+            "lng": 28.219682,
+            "localPai": null
+        }, {
+            "id": 7,
+            "nome": "Medellín, Colômbia",
+            "lat": 6.27018,
+            "lng": -75.598095,
+            "localPai": null
+        }, {
+            "id": 8,
+            "nome": "Xangai, China",
+            "lat": 31.2243489,
+            "lng": 121.4767528,
+            "localPai": null
+        }, {
+            "id": 9,
+            "nome": "Sidnei, Austrália",
+            "lat": -33.7969235,
+            "lng": 150.9224326,
+            "localPai": null
+        }, {
+            "id": 10,
+            "nome": "Aeroporto Internacional de San Diego",
+            "lat": 32.7314816,
+            "lng": -117.1965762,
+            "localPai": 1
+        }, {
+            "id": 11,
+            "nome": "Apartamento",
+            "lat": 32.5821904,
+            "lng": -117.1322586,
+            "localPai": 10
+        }, {
+            "id": 12,
+            "nome": "Aeroporto Internacional John F. Kennedy",
+            "lat": 40.6437604,
+            "lng": -73.783574,
+            "localPai": 2
+        }, {
+            "id": 13,
+            "nome": "Museu e Memorial Nacional do 11 de Setembro",
+            "lat": 40.711493,
+            "lng": -74.013282,
+            "localPai": 12
+        }, {
+            "id": 14,
+            "nome": "Sede da Organização das Nações Unidas",
+            "lat": 40.7499555,
+            "lng": -73.9689414,
+            "localPai": 12
+        }, {
+            "id": 15,
+            "nome": "Museu do Chinês na América",
+            "lat": 40.719449,
+            "lng": -73.999056,
+            "localPai": 12
+        }, {
+            "id": 16,
+            "nome": "Aeroporto Internacional de Kuala Lumpur - KLIA",
+            "lat": 2.7548016,
+            "lng": 101.7038591,
+            "localPai": 3
+        }, {
+            "id": 17,
+            "nome": "Torres Petronas",
+            "lat": 3.1578518,
+            "lng": 101.7118683,
+            "localPai": 16
+        }, {
+            "id": 18,
+            "nome": "Templo Thean Hou",
+            "lat": 3.12181,
+            "lng": 101.68772,
+            "localPai": 16
+        }, {
+            "id": 19,
+            "nome": "Museu de Artes Islâmicas da Malásia",
+            "lat": 3.1420325,
+            "lng": 101.6900841,
+            "localPai": 16
+        }, {
+            "id": 20,
+            "nome": "Aeroporto Internacional Sheremetyevo",
+            "lat": 55.9641133,
+            "lng": 37.422934,
+            "localPai": 4
+        }, {
+            "id": 21,
+            "nome": "Kremlin",
+            "lat": 55.752023,
+            "lng": 37.617499,
+            "localPai": 20
+        }, {
+            "id": 22,
+            "nome": "Teatro Acadêmico Musical Stanislavsky e Nemirovich-Danchenko",
+            "lat": 55.764654,
+            "lng": 37.610903,
+            "localPai": 20
+        }, {
+            "id": 23,
+            "nome": "Catedral de São Basílio",
+            "lat": 55.752523,
+            "lng": 37.6234621,
+            "localPai": 20
+        }],
+    "Suspeitos": [
+        {
+            "id": 1,
+            "nome": "Liu Zhang Chao"
+       }
+    ],
+    "Missoes": [
+        {
+            "id": 1,
+            "nome": "Encontrar suspeito do roubo à Carmen Sandiego",
+            "inicio": 1502109000000,
+            "prazo": 1502326800000,
+            "suspeito": 1,
+            "localInicio": 10
+        }
+    ],
+    "Etapas": [
+        {
+            "id": 1,
+            "missao": 1,
+            "local": 11,
+            "nome": "Encontrar apartamento de Carmen Sandiego e coletar informação",
+            "etapaMae": null
+        }, {
+            "id": 2,
+            "missao": 1,
+            "local": 10,
+            "nome": "Retornar ao Aeroporto",
+            "etapaMae": 1
+        }, {
+            "id": 3,
+            "missao": 1,
+            "local": 12,
+            "nome": "Viajar até a cidade identificada na informação",
+            "etapaMae": 2
+        }, {
+            "id": 4,
+            "missao": 1,
+            "local": 15,
+            "nome": "Descobrir pistas sobre o suspeito nesta cidade",
+            "etapaMae": 3
+        }, {
+            "id": 5,
+            "missao": 1,
+            "local": 12,
+            "nome": "Retornar ao Aeroporto",
+            "etapaMae": 4
+        }, {
+            "id": 6,
+            "missao": 1,
+            "local": 16,
+            "nome": "Viajar até a cidade identificada nas pistas",
+            "etapaMae": 5
+        }, {
+            "id": 7,
+            "missao": 1,
+            "local": 18,
+            "nome": "Descobrir pistas sobre o suspeito nesta cidade",
+            "etapaMae": 6
+        }, {
+            "id": 8,
+            "missao": 1,
+            "local": 16,
+            "nome": "Retornar ao Aeroporto",
+            "etapaMae": 7
+        }, {
+            "id": 9,
+            "missao": 1,
+            "local": 20,
+            "nome": "Viajar até a cidade identificada nas pistas",
+            "etapaMae": 8
+        }, {
+            "id": 10,
+            "missao": 1,
+            "local": 23,
+            "nome": "Encontrar suspeito",
+            "etapaMae": 9
+        }
+    ],
+    "Deslocamentos": [
+        {
+            "id": 1,
+            "tipoDeslocamento": 4,
+            "localOrigem": 10,
+            "localDestino": 12,
+            "tempoValor": 310,
+            "tempoTexto": "5h 10min"
+        },
+        {
+            "id": 2,
+            "tipoDeslocamento": 4,
+            "localOrigem": 10,
+            "localDestino": 16,
+            "tempoValor": 1397,
+            "tempoTexto": "23h 17min"
+        },
+        {
+            "id": 3,
+            "tipoDeslocamento": 4,
+            "localOrigem": 10,
+            "localDestino": 20,
+            "tempoValor": 910,
+            "tempoTexto": "15h 10min"
+        },
+        {
+            "id": 4,
+            "tipoDeslocamento": 4,
+            "localOrigem": 12,
+            "localDestino": 10,
+            "tempoValor": 380,
+            "tempoTexto": "6h 20min"
+        },
+        {
+            "id": 5,
+            "tipoDeslocamento": 4,
+            "localOrigem": 12,
+            "localDestino": 16,
+            "tempoValor": 1220,
+            "tempoTexto": "20h 20min"
+        },
+        {
+            "id": 6,
+            "tipoDeslocamento": 4,
+            "localOrigem": 12,
+            "localDestino": 20,
+            "tempoValor": 907,
+            "tempoTexto": "15h 7min"
+        },
+        {
+            "id": 7,
+            "tipoDeslocamento": 4,
+            "localOrigem": 16,
+            "localDestino": 10,
+            "tempoValor": 1262,
+            "tempoTexto": "21h 2min"
+        },
+        {
+            "id": 8,
+            "tipoDeslocamento": 4,
+            "localOrigem": 16,
+            "localDestino": 12,
+            "tempoValor": 1285,
+            "tempoTexto": "21h 25min"
+        },
+        {
+            "id": 9,
+            "tipoDeslocamento": 4,
+            "localOrigem": 16,
+            "localDestino": 20,
+            "tempoValor": 800,
+            "tempoTexto": "13h 20min"
+        },
+        {
+            "id": 10,
+            "tipoDeslocamento": 4,
+            "localOrigem": 20,
+            "localDestino": 10,
+            "tempoValor": 975,
+            "tempoTexto": "16h 15min"
+        },
+        {
+            "id": 11,
+            "tipoDeslocamento": 4,
+            "localOrigem": 20,
+            "localDestino": 12,
+            "tempoValor": 645,
+            "tempoTexto": "10h 45min"
+        },
+        {
+            "id": 12,
+            "tipoDeslocamento": 4,
+            "localOrigem": 20,
+            "localDestino": 16,
+            "tempoValor": 790,
+            "tempoTexto": "13h 10min"
+        }
+    ],
+    "Dicas": [
+        {
+            "id": 1,
+            "dica": "O apartamento possui uma bela vista para o mar e está localizado a pouco mais de 5 km da fronteira com o México.",
+            "local": 11
+        },
+        {
+            "id": 2,
+            "dica": "Depois dos ataques terroristas de 2001, esta se tornou a localização mais conhecida de Manhattan.",
+            "local": 13
+        },
+        {
+            "id": 3,
+            "dica": "O centro do comando mundial possui localização privilegiada na 1ª Avenida, em Manhattan.",
+            "local": 14
+        },
+        {
+            "id": 4,
+            "dica": "Localizado na Chinatown de Nova Iorque, que é um dos maiores enclaves de chineses no hemisfério ocidental, bem no coração de Manhattan.",
+            "local": 15
+        },
+        {
+            "id": 5,
+            "dica": "Cartões postais da cidade, as Petronas Towers são facilmente identificáveis mesmo vistas de cima, 45 km a Norte do Aeroporto, no Centro da Cidade de Kuala Lumpur.",
+            "local": 17
+        },
+        {
+            "id": 6,
+            "dica": "Localizado numa grande área verde mais ao sul da cidade, 5 km a Sudoeste das Torres Petronas, próximo a Brickfields.",
+            "local": 18
+        },
+        {
+            "id": 7,
+            "dica": "Localizado pouco mais de 2 km a Norte do Templo Thean Hou, no Parque Taman Tasik Perdana.",
+            "local": 19
+        },
+        {
+            "id": 8,
+            "dica": "Sede do Governo, bem no centro de Moscou, um belo complexo de prédios bem em frente ao Rio Moskva, rodeado pelos Jardins de Alexandre e pelo Parque Bolshoy Kremlevskiy Skver",
+            "local": 21
+        },
+        {
+            "id": 9,
+            "dica": "Um dos palcos mais famosos do mundo da música clássica, localizado pouco mais de 1 km a Noroeste do Kremlin.",
+            "local": 22
+        },
+        {
+            "id": 10,
+            "dica": "Imponente construção, logo ao lado do Kremlin.",
+            "local": 23
+        }
+    ],
+    "Informacoes": [
+        {
+            "id": 1,
+            "informacao": "Sempre comprar maçãs grandes com origens orientais.",
+            "local": 11
+        },
+        {
+            "id": 2,
+            "informacao": "As torres gêmeas foram essenciais na economia mundial. Aviões podem derrubar prédios, empresas e nações.",
+            "local": 13
+        },
+        {
+            "id": 3,
+            "informacao": "Foi sim visto um senhor de óculos e cabelos grisalhos. Ele portava um passaporte de um país asiático que é uma das economias que mais registraram crescimento econômico no continente.",
+            "local": 14
+        },
+        {
+            "id": 4,
+            "informacao": "Um senhor de óculos e cabelos grisalhos perguntou sobre Carmen. Ele comprou uma pequena estátua de Buda e disse que iria meditar pela cidade.",
+            "local": 15
+        },
+        {
+            "id": 5,
+            "informacao": "Um senhor esteve aqui e subiu nas torres. Se impressionou, mas falou que não era tão alto quanto ir para o espaço.",
+            "local": 17
+        },
+        {
+            "id": 6,
+            "informacao": "Foi visto um homem de meia idade e de óculos. Ele comentou que estava vindo dos EUA, e que gostava do silêncio do templo. Mas que em breve assistiria música clássica e balé em um tradicional teatro reconhecido mundialmente.",
+            "local": 18
+        },
+        {
+            "id": 7,
+            "informacao": "Lembro bem, estava mesmo com uma cara suspeita. Disse que há muitos anos tinha vindo com uma tal de Carmen a esse museu para passar o dia, mas que dessa vez teria que se apressar e ir comprar bons casacos para uma longa viagem.",
+            "local": 19
+        },
+        {
+            "id": 8,
+            "informacao": "Com certeza vi esse senhor. Ele estava com uma pasta  e caminhava lentamente em direção ao rio.",
+            "local": 21
+        },
+        {
+            "id": 9,
+            "informacao": "Esse senhor esteve aqui ontem à noite. Disse que hoje estaria caminhando pelos grandes monumentos.",
+            "local": 22
+        },
+        {
+            "id": 10,
+            "informacao": "SUSPEITO ENCONTRADO!<br /><br />Liu Zhang Chao: &ldquo;Por muito tempo investiguei Carmen como membro do FBI. Quando me apaixonei por ela decidi parar de enviar seu paradeiro. Mas ela nunca me correspondeu e então passei a atrapalhar seus planos. Se ela não conseguisse seus objetivos poderia voltar para San Diego e se casar comigo.&rdquo;",
+            "local": 23
+        }
+    ]
+}

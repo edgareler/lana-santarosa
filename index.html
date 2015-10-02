@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lana Santarosa</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,500,700" rel="stylesheet" type="text/css" />
+        <link rel="icon" type="image/png" href="/img/icon.png" />
+        <link href="css/hint.min.css" rel="stylesheet" />
+        <link href="css/lana.css" rel="stylesheet" />
+        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAXBujDguzuwC5XMFKtfMLShk6xgSG06v4&sensor=false"></script>
+        <script src="https://cdn.firebase.com/js/client/2.0.6/firebase.js"></script>
+        <script src="js/lana.js"></script>
+    </head>
+    <body>
+        <div id="map_canvas"></div>
+
+        <div id="splash" class="full">
+            <div>
+                Lana Santarosa
+                <div id="btStart">
+                    <span>Iniciar</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="objetivos" class="full">
+            <div id="titleMissao" class="titleFull">
+                Missão: <span id="nomeMissao"></span>
+            </div>
+            <div id="descMissao">
+                <div id="suspeito">
+                    <img src="img/img-suspeito.png" alt="Foto do Suspeito" width="210" height="260" />
+                    -- Não identificado --
+                </div>
+                <div id="listaObjetivos">
+                    <div class="titleObjetivos">Objetivos</div>
+                    <div>
+                        <ul class="objetivos" id="ulObjetivos">
+                        </ul>
+                    </div>
+                    <div class="titleObjetivos" id="titlePrazo">Prazo da Missão</div>
+                    <ul class="objetivos">
+                        <li id="prazo">00/00/0000 00:00:00</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div id="dicas" class="full">
+            <div id="titleDicas" class="titleFull">
+                Dicas Úteis
+            </div>
+            <ul id="listaDicas">
+                <!--<li><span>Apartamento:</span> O apartamento possui uma bela vista para o mar e está localizado a pouco mais de 5 km da fronteira com o México.</li>-->
+            </ul>
+        </div>
+        
+        <div id="infos" class="full">
+            <div id="titleInfos" class="titleFull">
+                Informações e Pistas
+            </div>
+            <div id="descInfo"></div>
+        </div>
+
+        <div id="pergunta" class="full">
+            <div id="localPergunta" class="titleFull">
+            </div>
+            <div id="titlePergunta" class="titleFull">
+            </div>
+            <div id="alternativasPergunta" class="titleFull">
+<!--                <div class="verde">SIM</div>
+                <div class="vermelho">NÃO</div>-->
+            </div>
+            <div id="dicaPergunta">
+            </div>
+        </div>
+        
+        <div id="hud">
+            <div id="relogio">
+                00/00/0000 00:00:00
+            </div>
+            <div id="cidade">
+                --
+            </div>
+            <div id="menu">
+                <!--<span class="hint--left" data-hint="Busque o suspeito com o Smartphone"><img id="btnSmartphone" src="img/bt-smartphone.png" width="48" height="48" alt="Smartphone" /></span>-->
+                <span class="hint--left" data-hint="Objetivos da Missão"><img id="btnObjetivos" src="img/bt-objectives.png" width="48" height="48" alt="Objetivos" /></span>
+                <span class="hint--left" data-hint="Dicas Úteis"><img id="btnDicas" src="img/bt-dicas.png" width="48" height="48" alt="Dicas" /></span>
+            </div>
+            <div id="radar" class="hint--left multiline" data-hint="O radar indica em vermelho a proximidade com os locais. Os locais serão identificados a níveis máximos de zoom">
+                <svg version="1.1" id="imgRadar" width="48px" height="48px">
+                    <g id="gRadar" transform="scale(0.48)">
+                        <path d="M50,0C22.43,0,0,22.43,0,50C0,77.57,22.43,100,50,100C77.57,100,100,77.57,100,50C100,22.43,77.57,0,50,0z M93.033,49.073   H75.479c-0.205-5.671-2.267-10.874-5.599-15.019l6.29-6.29c1.086-1.086,1.086-2.848,0-3.935s-2.849-1.086-3.935,0l-6.29,6.29   c-4.145-3.332-9.348-5.394-15.019-5.598V6.967C73.926,7.456,92.544,26.073,93.033,49.073z M50.927,26.376   c5.159,0.2,9.897,2.061,13.699,5.063L50.927,45.138V26.376z M49.073,46.993l-1.04,1.04c-0.303,0.303-0.513,0.661-0.646,1.04h-21.01   c0.477-12.302,10.394-22.219,22.696-22.696V46.993z M47.386,50.928c0.135,0.378,0.344,0.736,0.647,1.04   c0.303,0.303,0.66,0.512,1.039,0.646v21.01C36.77,73.146,26.854,63.23,26.376,50.928H47.386z M50.927,52.614   c0.379-0.134,0.737-0.343,1.04-0.646l1.04-1.04h20.616C73.147,63.23,63.23,73.146,50.927,73.624V52.614z M54.862,49.073   L68.56,35.374c3.002,3.801,4.863,8.54,5.063,13.699H54.862z M49.073,6.967v17.555c-13.325,0.479-24.072,11.226-24.551,24.551H6.967   C7.456,26.073,26.073,7.456,49.073,6.967z M6.967,50.928h17.555c0.479,13.325,11.226,24.071,24.551,24.551v17.554   C26.073,92.544,7.456,73.927,6.967,50.928z M50.927,93.033V75.479c13.325-0.479,24.071-11.226,24.552-24.551h17.554   C92.544,73.927,73.926,92.544,50.927,93.033z" id="path5" />
+                        <circle cx="58.033" cy="19.364" r="2.627" id="circle7" />
+                        <circle cx="43.427" cy="37.37" r="2.241" id="circle9" />
+                        <circle cx="20.244" cy="33.274" r="4.095" id="circle11" />
+                    </g>
+                </svg>
+            </div>
+            <div id="globe">
+                <span class="hint--left" data-hint="Ir para Modo Satélite"><img src="img/globe.png" alt="Globo" width="48" height="48" /></span>
+            </div>
+            <div id="aero">
+                <span class="hint--left" data-hint="Comprar Passagem Aérea"><img src="img/aero.png" alt="Avião" width="48" height="48" /></span>
+            </div>
+            <div id="btDvInfos">
+                <span class="hint--left" data-hint="Exibir Informações e Pistas"><img src="img/bt-infos.png" alt="Informações" width="48" height="48" /></span>
+            </div>
+        </div>
+    </body>
+</html>

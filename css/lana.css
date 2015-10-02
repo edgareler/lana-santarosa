@@ -1,0 +1,299 @@
+/* 
+    Created on : 14/12/2014, 03:58:48
+    Author     : Edgar Eler <eler@edgar.systems>
+*/
+
+* {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+html {
+    height: 100%;
+    cursor: default;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.verde {
+    color: lime;
+}
+
+.vermelho {
+    color: red;
+}
+
+.ciano {
+    color: cyan;
+}
+
+#map_canvas,
+#panorama {
+    position: absolute;
+    width:100%;
+    height:100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#panorama {
+    z-index: 2;
+    display: none;
+}
+
+.minimap {
+    width:480px;
+    height:320px;
+    z-index: 3;
+    position:absolute;
+    left: 1.0rem;
+    bottom: 1.0rem;
+    border: 0.250rem solid white;
+} 
+
+#hud {
+    background: -moz-linear-gradient(45deg,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 75%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(0,0,0,0)), color-stop(75%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(45deg,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 75%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(45deg,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 75%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(45deg,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 75%,rgba(0,0,0,1) 100%); /* IE10+ */
+    background: linear-gradient(45deg,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 75%,rgba(0,0,0,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000', GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 90%;
+    text-align: right;
+    z-index: 2;
+    pointer-events: none;
+}
+
+#hud > div {
+    margin: 1rem 1rem 0 0;
+}
+
+.hint:after, [data-hint]:after {
+    background: rgba(0,0,0,0.8);
+}
+
+div#radar.hint--left::after {
+    white-space: pre-wrap;
+    width: 320px;
+    line-height: 18px;
+    margin-bottom: -25px;
+}
+
+#relogio,
+#cidade {
+    font-size: 1.250rem;
+    font-weight: 400;
+}
+
+#menu img {
+    pointer-events: auto;
+}
+
+#radar svg {
+    pointer-events: auto;
+}
+
+#imgRadar {
+    /*    width: 3.000rem;
+        height: 3.000rem;*/
+    width: 48px;
+    height: 48px;
+}
+
+#gRadar {
+    fill: rgb(255,255,255);
+}
+
+#globe,
+#aero,
+#btDvInfos {
+    display: none;
+}
+#globe img,
+#aero img,
+#btDvInfos img {
+    pointer-events: auto;
+}
+
+.full {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 101;
+    width:100%;
+    height:100%;
+    background: url(../img/bg-spy.png) right bottom no-repeat rgba(0,0,0,0.9);
+}
+
+#splash > div {
+    margin-top: 9.375rem;
+    font-weight: 100;
+    font-size: 4.375rem;
+    text-align: center;
+}
+
+#splash > div > div {
+    margin-top: 12.500rem;
+    text-align: center;
+}
+
+#splash > div > div > span {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 2.500rem;
+    color: cyan;
+}
+
+
+#splash > div > div > span:hover {
+    color: white;
+}
+
+#objetivos {
+    display: none;
+    z-index: 102;
+}
+
+.titleFull {
+    font-size: 3.125rem;
+    margin-top: 5.625rem;
+    font-weight: 100;
+    text-align: center;
+}
+
+#descMissao,
+#listaDicas {
+    width: 42%;
+    min-width: 1000px;
+    margin: auto;
+    margin-top: 5.625rem;
+}
+
+#suspeito {
+    display: inline-block;
+    /*padding: 0 2.0rem 2.0rem 0;*/
+    width: 210px;
+    /*height: calc(260px + 2.0rem);*/
+    font-size: 1.0rem;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: top;
+}
+
+#suspeito img{
+    padding-bottom: 1.0rem;
+}
+
+#listaObjetivos{
+    display: inline-block;
+    margin-left: 2.0rem;
+    text-align: left;
+    vertical-align: top;
+}
+
+.titleObjetivos {
+    font-size: 2.0rem;
+    font-weight: 500;
+}
+
+#titlePrazo {
+    margin-top: 5.0rem;
+}
+
+ul.objetivos {
+    /*padding: 0;
+    margin: 0;*/
+}
+
+ul.objetivos li {
+    list-style-image: url(../img/li-default.png);
+    font-size: 1.250rem;
+    font-weight: 400;
+    line-height: 2rem;
+}
+
+ul.objetivos li.okay {
+    list-style-image: url(../img/li-ok.png);
+}
+
+ul.objetivos li.error {
+    list-style-image: url(../img/li-err.png);
+}
+
+#pergunta {
+    display: none;
+    z-index: 103;
+}
+
+#titlePergunta {
+    font-size: 2.500rem;
+}
+
+#alternativasPergunta div,
+#dicaPergunta div {
+    display: inline-block;
+    vertical-align: bottom;
+    margin: 0 3.750rem 0 3.750rem;
+}
+
+#dicaPergunta div {
+    margin: 0;
+    padding: 0;
+}
+
+#alternativasPergunta div:hover {
+    color: white;
+}
+
+#dicaPergunta,
+#listaDicas,
+#descInfo {
+    font-size: 1.250rem;
+    margin-top: 5.625rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.font-30 {
+    font-size: 1.875rem;
+}
+
+.width-33,
+#alternativasPergunta div.width-33{
+    width: calc(100%/3);
+    margin: 0;
+    padding: 0;
+}
+
+#dicas,
+#infos {
+    display: none;
+}
+
+#listaDicas {
+    text-align: left;
+}
+
+#listaDicas li {
+    margin-bottom: 1.500rem;
+}
+
+#listaDicas li span {
+    font-weight: 700;
+}
